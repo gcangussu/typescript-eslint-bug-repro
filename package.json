@@ -1,0 +1,21 @@
+{
+  "name": "typescript-eslint-bug-repro",
+  "version": "1.0.0",
+  "description": "Reproduce bug in typescript-eslint single run",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcangussu/typescript-eslint-bug-repro.git"
+  },
+  "license": "ISC",
+  "scripts": {
+    "test": "tsc --build && eslint --ext=.ts .",
+    "test-without-single-run-inference": "tsc --build && eslint --ext=.ts --parser-options=allowAutomaticSingleRunInference:false ."
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "eslint": "^7.32.0",
+    "prettier": "^2.3.2",
+    "typescript": "^4.4.2"
+  }
+}
